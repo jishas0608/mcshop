@@ -1,0 +1,77 @@
+function msSchemaLoader() {
+    try {
+        var e = new XMLHttpRequest
+          , t = (new XMLHttpRequest,
+        "https://schema.milestoneinternet.com/schema/" + extractSubdomain(encodeURI(window.location.href)) + "/schema.json?t=" + Math.floor(1e4 * Math.random()) + 1);
+        e.onreadystatechange = function() {
+            4 == e.readyState && 200 == e.status && "[]" != e.responseText && (msFilter.remove(),
+            jsonld = document.createElement("script"),
+            jsonld.type = "application/ld+json",
+            jsonld.id = "ms-jsonblock",
+            jsonld.innerHTML = e.responseText,
+            appendschema(jsonld))
+        }
+        ,
+        e.open("GET", t, !0),
+        e.setRequestHeader("x-ms-blob-type", "BlockBlob"),
+        e.send()
+    } catch (e) {
+        console.log(e)
+    }
+}
+function appendschema(jsonld) {
+    "[]" != jsonld.innerHTML && (document.getElementsByTagName("head")[0].appendChild(jsonld));
+     console.log("schema added to head");
+	 if (window.location.host == 'zinnovzones.com')
+	 {
+		 console.log(jsonld);
+	 }
+	 
+}
+function extractSubdomain(e) {
+    var t = "";
+    return null != (e = (e = (e = (e = e.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i), "")).replace(new RegExp(/^uat\.|^www\./i), "")).split("?").shift()).split("#").shift()) && (t = trimTrailingChars(e, "/")),
+    t
+}
+function trimTrailingChars(e, t) {
+    var n = new RegExp(t + "+$");
+    return e.replace(n, "")
+}
+var msFilter = {
+    onLoad: "load",
+    remove: function() {
+        msFilter.removeMicroData(),
+        msFilter.removeJSONLD()
+    },
+    removeJSONLD: function() {
+        for (var e = document.querySelectorAll('[type="application/ld+json"]'), t = 0; t < e.length; t++)
+            e[t].remove();
+        console.log("existing schema removed");
+    },
+    removeMicroData: function() {
+        var e = document.querySelectorAll("[itemtype]");
+        0 === e.length && (e = document.querySelector("html"));
+        for (var t = [], n = 0; n < e.length; n++) {
+            var o = e[n];
+            o.getAttribute("itemtype").split("/").pop(),
+            t.push(o)
+        }
+        for (n = 0; n < t.length; n++) {
+            var r = t[n];
+            r.removeAttribute("itemtype");
+            for (var a = r.querySelectorAll("[itemprop]"), i = 0; i < a.length; i++) {
+                var l = a[i];
+                l.removeAttribute("itemprop"),
+                l.removeAttribute("itemscope"),
+                l.removeAttribute("content")
+            }
+        }
+        var s = document.querySelectorAll("[itemscope]");
+        for (0 === s.length && (s = document.querySelector("html")),
+        f = 0; f < s.length; f++) {
+            var p = s[f];
+            p.removeAttribute("itemscope")
+        }
+        ;console.log("existing schema removed");
+    }
+};

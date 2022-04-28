@@ -1,0 +1,22 @@
+h1:hover{
+    color: rgb(206, 163, 22);
+}
+
+.card:hover{
+    transform: scale(0.9);
+    
+}
+.img card-img-top{
+    margin-top: 30px;
+    width:150px;
+    height: 150px;
+}
+.btn{
+    color:white;
+    background-color: red;
+
+}
+.btn:hover{
+    background-color: black;
+    color: aliceblue;
+}
