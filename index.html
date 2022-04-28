@@ -70,7 +70,8 @@
        <!-- carousel -->
 
     <div class="slide">
-        <div class="container" style="padding-left: 300px;"> 
+        <!-- <div class="container-fluid" style="padding-left: 300px;">  -->
+          <div class="container-fluid bg-white"> 
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="align-items: center;">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="600">
@@ -180,35 +181,40 @@
   <br>
   <!-- <carousal></carousal> -->
   <div class="main slid">
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="container-fluid bg-light"> 
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"data-bs-interval="50">
+            <img src="./images/am3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="50">
+            <img src="./images/am2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="50">
+            <img src="./images/amm2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active"data-bs-interval="50">
-          <img src="./images/am3.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="50">
-          <img src="./images/am2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="50">
-          <img src="./images/amm2.jpg" class="d-block w-100" alt="...">
-        </div>
-        
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
+          
+
+    
+      
+      
 
   <!-- start order -->
   <div class="order" style="background-color:black;height:120px;color:white;text-align: center;padding-top: 20px;">
@@ -218,13 +224,16 @@
   <br>
   <br>
   <!-- gallery -->
-  <h1 style="text-align: center; padding-top: 20px;">BURGERS</h1>
+
+  <div class="row">
+    <!-- first gallery -->
+    <!-- defalut c
+        all value-12-xtra small size (just col used ) -->
+    <h1 style="text-align: center; padding-top: 20px;">BURGERS</h1>
     <br>
- 
-  <div class="galery" style="display:flex;align-items: center;width:1798px; background-color: rgb(226, 52, 52);padding: 50px;">
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
       <div class="container">
-        <div class="card" style="width:500px;height:400px;">
+        <div class="card" >
           <img src="./images/br1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h4 class="card-title">
@@ -233,151 +242,203 @@
             <a href="#" class="btn btn-danger">Add to Cart</a>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
+      </div>
+      
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
       <div class="container">
-        <div class="card" style="width:500px;height:400px;">
+        <div class="card" >
           <img src="./images/br2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h4 class="card-title">McDouble®</h4>
+            <h4 class="card-title">
+              MC Double®</h4>
             <h6>Rs.194</h6>
             <a href="#" class="btn btn-danger">Add to Cart</a>
           </div>
         </div>
-      </div>
-     
-    </div>
 
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
+      </div>
+      
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
       <div class="container">
-        <div class="card" style="width:500px;height:400px;">
+        <div class="card" >
           <img src="./images/br5.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h4 class="card-title">
-              Quarter Pounder with Cheese </h4>
+              Chicken Burger®</h4>
+            <h6>Rs.190</h6>
+            <a href="#" class="btn btn-danger">Add to Cart</a>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+      <div class="container">
+        <div class="card" >
+          <img src="./images/br1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title">
+             quarter pounder with cheese</h4>
             <h6>Rs.184</h6>
             <a href="#" class="btn btn-danger">Add to Cart</a>
           </div>
         </div>
-      </div>
-     
-    </div>
 
+      </div>
+      
+    </div>
+   
+     
   </div>
+
+
   <br>
-  <!-- second gallery -->
-  <h1 style="text-align: center; padding-top: 20px;">COMBO MEAL</h1>
+    <!-- second gallery -->
+ <div class="row">
+   
+  <h1 style="text-align: center; padding-top: 20px;">COMBO MEALS</h1>
     <br>
-  <div class="galary"style="display:flex;align-items: center;width:1798px; background-color: rgb(226, 52, 52);padding: 50px;">
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
       <div class="container">
-        <div class="card" style="width:500px;height:400px;">
-          <img src="./images/big1.jfif" class="card-img-top" alt="...">
+        <div class="card" >
+          <img src="./images/br1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h4 class="card-title">
-              Big Mac® Combo Meal</h4>
+              Big Mac crispy and combo meal</h4>
             <h6>Rs.799</h6>
             <a href="#" class="btn btn-danger">Add to Cart</a>
           </div>
         </div>
+
+      </div>
+      
+    </div>
+  
+ <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+  <div class="container">
+    <div class="card" >
+      <img src="./images/big2.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">
+          Crispy Chicken Sandwich Combo Meal</h4>
+        <h6>Rs.699</h6>
+        <a href="#" class="btn btn-danger">Add to Cart</a>
       </div>
     </div>
 
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
-      <div class="container">
-        <div class="card" style="width:500px;height:400px;">
-          <img src="./images/big2.jfif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">
-              Crispy Chicken Sandwich Combo Meal</h4>
-            <h6>Rs.699</h6>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
-      <div class="container">
-        <div class="card" style="width:500px;height:400px;">
-          <img src="./images/big3.jfif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">
-              Spicy Crispy Chicken Sandwich </h4>
-            <h6>Rs.899</h6>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
-          </div>
-        </div>
+  </div>
+     
+ </div>
+ <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+  <div class="container">
+    <div class="card" >
+      <img src="./images/big3.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">
+          Spicy Crispy Chicken Sandwich </h4>
+        <h6>Rs.899</h6>
+        <a href="#" class="btn btn-danger">Add to Cart</a>
       </div>
     </div>
   </div>
-  <!-- third row -->
-  <br>
-  
-  <h1 style="text-align: center; padding-top: 20px;">
-    McCafé® Drinks</h1>
-    <br>
-  <div class="gala"style="display:flex;align-items: center;width:1798px; background-color: rgb(226, 52, 52);padding: 50px;">
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
-      <div class="container">
-        <div class="card" style="width:500px;height:400px;">
-          <img src="./images/ca4.jfif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">Hot Choclate
-            </h4>
-            <h6>Rs.250</h6>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
-          </div>
+    
+ </div>
+
+  <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+    <div class="container">
+      <div class="card" >
+        <img src="./images/big3.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">
+            Tasty Chicken Sandwich with cola</h4>
+          <h6>Rs.599</h6>
+          <a href="#" class="btn btn-danger">Add to Cart</a>
         </div>
       </div>
     </div>
+      
+   </div>
+   <!-- third gallery -->
+   <div class="row">
+   
+    <h1 style="text-align: center; padding-top: 20px;">McCafé® Drinks</h1>
+      <br>
+      <br>
 
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
+      <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+        <div class="container">
+          <div class="card" >
+            <img src="./images/ca4.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Hot Choclate
+              </h4>
+              <h6>Rs.250</h6>
+              <a href="#" class="btn btn-danger">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+   <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+    <div class="container">
+      <div class="card" >
+        <img src="./images/ca3.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">
+            Americano</h4>
+          <h6>Rs.279</h6>
+          <a href="#" class="btn btn-danger">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
+    <div class="container">
+      <div class="card" >
+        <img src="./images/ca7.jfif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">Hot Choclate
+          </h4>
+          <h6>Rs.250</h6>
+          <a href="#" class="btn btn-danger">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+ 
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 border border-white text-black bg-white">
       <div class="container">
-        <div class="card" style="width:500px;height:400px;">
+        <div class="card" >
           <img src="./images/ca3.jfif" class="card-img-top" alt="...">
           <div class="card-body">
-            <h4 class="card-title">
-              Americano</h4>
-            <h6>Rs.279</h6>
+            <h4 class="card-title">Iced Coffee
+            </h4>
+            <h6>Rs 200</h6>
             <a href="#" class="btn btn-danger">Add to Cart</a>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="gal-lg-4 gal-md-6 gal-sm-12">
-      <div class="container">
-        <div class="card" style="width:500px;height:400px;">
-          <img src="./images/ca7.jfif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">
-              Latte</h4>
-            <h6>Rs.299</h6>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
-          </div>
-        </div>
+   
       </div>
-    </div>
-  </div>
   
 
-    
-    
- 
 
 
   <br>
   <br>
   
   <hr>
-  <br><br>
+  <br><br> 
 
 
-<!--   
-   follow us --> 
+   
+   <!-- follow us --> 
   <div class="icon" style="text-align:center;color:black;">
     <h4>Follow Us On</h4>
     <br>
